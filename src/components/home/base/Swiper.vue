@@ -2,22 +2,9 @@
   <div class="swiper">
     <swiper :options="swiperOption">
       <!-- slides -->
-      <swiper-slide>
-        <img class="swiper-img" src="../../../../public/images/index/swiper/01.jpg" alt="" >
+      <swiper-slide v-for="item in dataimg" :key="item">
+        <img class="swiper-img" :src="item.src" alt="" >
       </swiper-slide>
-      <swiper-slide>
-        <img class="swiper-img" src="../../../../public/images/index/swiper/02.jpg" alt="">
-      </swiper-slide>
-      <swiper-slide>
-        <img class="swiper-img" src="../../../../public/images/index/swiper/03.jpg" alt="">
-      </swiper-slide>
-      <swiper-slide>
-        <img class="swiper-img" src="../../../../public/images/index/swiper/04.jpg" alt="">
-      </swiper-slide>
-      <swiper-slide>
-        <img class="swiper-img" src="../../../../public/images/index/swiper/05.jpg" alt="">
-      </swiper-slide>
-      <!-- Optional controls -->
       <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
   </div>
@@ -30,8 +17,18 @@
         swiperOption:{
           pagination: {
             el: '.swiper-pagination'
-          }
-        }
+
+          },
+          loop:true,
+          autoplay:2000
+        },
+        dataimg:[
+          {src:require('../../../assets/images/index/swiper/01.jpg')},
+          {src:require('../../../assets/images/index/swiper/02.jpg')},
+          {src:require('../../../assets/images/index/swiper/03.jpg')},
+          {src:require('../../../assets/images/index/swiper/04.jpg')},
+          {src:require('../../../assets/images/index/swiper/05.jpg')}
+        ]
       }
     }
   }
