@@ -18,7 +18,7 @@
     }
   }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
   .header{
     display:flex;
     height:.88rem; 
