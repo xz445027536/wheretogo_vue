@@ -5,19 +5,6 @@
       <swiper-slide v-for="(item,index) of imgs" :key="index">
         <img class="swiper-img" :src="item.img_url" alt="" >
       </swiper-slide>
-      <!-- <swiper-slide>
-        <img class="swiper-img" src="../../../assets/images/index/swiper_02.jpg" alt="">
-      </swiper-slide>
-      <swiper-slide>
-        <img class="swiper-img" src="../../../assets/images/index/swiper_03.jpg" alt="">
-      </swiper-slide>
-      <swiper-slide>
-        <img class="swiper-img" src="../../../assets/images/index/swiper_04.jpg" alt="">
-      </swiper-slide>
-      <swiper-slide>
-        <img class="swiper-img" src="../../../assets/images/index/swiper_05.jpg" alt="">
-      </swiper-slide> -->
-      <!-- Optional controls -->
       <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
   </div>
