@@ -70,7 +70,6 @@ export default {
     line-height: 0.4rem;
     font-size: 12px;
   }
-
   .nav-com {
     display: flex;
     .item-com {

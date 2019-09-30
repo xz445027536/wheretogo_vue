@@ -2,8 +2,8 @@
   <div class="swiper">
     <swiper :options="swiperOption">
       <!-- slides -->
-      <swiper-slide v-for="(item,index) of imgs" :key="index">
-        <img class="swiper-img" :src="item.img_url" alt="" >
+      <swiper-slide v-for="(item,index) of swiperList" :key="index">
+        <img class="swiper-img" :src="item.imgUrl" alt="" >
       </swiper-slide>
       <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
@@ -12,6 +12,7 @@
 <script>
   export default {
     name:'HomeSwiper',
+    props:["swiperList"],
     data(){
       return{
         swiperOption:{
@@ -23,14 +24,7 @@
             delay:3000
           },
           loop:true
-        },
-        imgs:[
-          {img_url:require('../../../assets/images/index/swiper_01.jpg')},
-          {img_url:require('../../../assets/images/index/swiper_02.jpg')},
-          {img_url:require('../../../assets/images/index/swiper_03.jpg')},
-          {img_url:require('../../../assets/images/index/swiper_04.jpg')},
-          {img_url:require('../../../assets/images/index/swiper_05.jpg')}
-        ]
+        }
       }
     }
   }
@@ -42,6 +36,7 @@
       height: 100%;
     }
     .swiper-img{
+      width: 100%;
       height: 100%;
     }
   }
